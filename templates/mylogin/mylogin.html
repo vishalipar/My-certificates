@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+</head>
+<body>
+    <div class="flex items-center justify-center h-screen w-full bg-stone-100" style='background-image: url("https://res.cloudinary.com/drkfjbilw/image/upload/v1770446278/hero_endframe__e4ls9pihykya_xlarge_an3myk.jpg"); background-size: cover; background-position:center; height: 100vh;'>
+        <div class="h-fit w-[30vw] py-6 px-9 bg-white bg-opacity-50 backdrop-blur-sm border border-stone-400 rounded-xl">
+            <p class='text-xl text-stone-800 font-semibold'>Login</p>
+            <form method='post' action="">
+                {% csrf_token %}
+                <div class="flex flex-col items-center gap-9">
+                    <div class="flex flex-col gap-4 w-full mt-9">
+                        <input type="text" name="username" id="" placeholder='Username' class='py-2 px-4 rounded-lg' required>
+                        <input type="password" name="password" id="" placeholder='Password' class='py-2 px-4 rounded-lg' required>
+                    </div>
+                    <input type="submit" value="Submit" class='text-white py-2 px-4 bg-stone-600 rounded-lg'>
+                </div>
+            </form>
+            <p class='text-sm text-stone-600 text-center mt-4'>If you forgot password, then this site is not for you. Kindly leave this site.</p>
+        </div>
+    </div>
+</body>
+</html>
